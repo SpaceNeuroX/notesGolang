@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('note-form');
     const notesList = document.getElementById('notes-list');
 
-    // Fetch notes from the server
     function fetchNotes() {
         fetch('/notes')
             .then(response => response.json())
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.error('Error fetching notes:', error));
     }
 
-    // Add a new note
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -44,6 +42,5 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.error('Error adding note:', error));
     });
 
-    // Initial fetch of notes
     fetchNotes();
 });
