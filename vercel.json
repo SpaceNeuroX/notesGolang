@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-tags netgo -ldflags '-s -w' -o app"
+    }
+  }
+}
